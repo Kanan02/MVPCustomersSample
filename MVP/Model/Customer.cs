@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVP.Model
 {
-    class Customer
+    public class Customer
     {
         public Customer(string fullName, string address, string email)
         {

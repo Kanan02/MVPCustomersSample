@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MVP.Repository
 {
-    interface ICustomerRepository
+    public interface ICustomerRepository
     {
         IEnumerable<Customer> GetAllCustomers();
         Customer GetCustomerById(int id);

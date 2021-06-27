@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVP.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,12 @@ namespace MVP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            var repository = new Repository.CustomerRepository(Application.StartupPath);
+            var view = new View.CustomerForm();
+            var presenter = new Presenter.CustomerPresenter(view, repository);
+            Application.Run(view);
+        
         }
     }
 }

@@ -48,6 +48,7 @@ namespace MVP.View
             this.SaveButton.TabIndex = 0;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // nameTextBox
             // 
@@ -73,6 +74,7 @@ namespace MVP.View
             this.EditButton.TabIndex = 3;
             this.EditButton.Text = "Edit";
             this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // listBox1
             // 
@@ -82,6 +84,7 @@ namespace MVP.View
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(276, 388);
             this.listBox1.TabIndex = 4;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label2
             // 
