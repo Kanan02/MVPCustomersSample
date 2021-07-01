@@ -17,6 +17,7 @@ namespace MVP.View
         public CustomerForm()
         {
             InitializeComponent();
+            
         }
        
         public IList<string> CustomerList
@@ -40,23 +41,30 @@ namespace MVP.View
             get { return emailTextBox.Text; }
             set { emailTextBox.Text = value; }
         }
+        public string Citizenship
+        {
+            get { return citizenshipTextBox.Text; }
+            set { citizenshipTextBox.Text = value; }
+        }
         public CustomerPresenter customerPresenter { get; set; }
         public int SelectedCustomer { get => listBox1.SelectedIndex; set => listBox1.SelectedIndex=value; }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            customerPresenter.SaveCustomer();
+            customerPresenter.SaveNewCustomer();
+            MessageBox.Show("New customer was saved!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information) ;
         }
 
         private void EditButton_Click(object sender, EventArgs e)
         {
             customerPresenter.SaveCustomer();
+            MessageBox.Show("Customer's info was edited!", "Edited", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             customerPresenter.UpdateCustomerView(listBox1.SelectedIndex);
-
 
         }
     }

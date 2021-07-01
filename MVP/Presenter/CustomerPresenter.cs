@@ -27,11 +27,18 @@ namespace MVP.Presenter
             view.FullName = customer.FullName;
             view.Address = customer.Address;
             view.Email = customer.Email;
+            view.Citizenship = customer.Citizenship;
         }
         public void SaveCustomer()
         {
-            Customer customer = new Customer(view.FullName, view.Address, view.Email);
+            Customer customer = new Customer(view.FullName, view.Address, view.Email,view.Citizenship);
             repository.SaveCustomer(view.SelectedCustomer, customer);
+            UpdateCustomerListView();
+        }
+        public void SaveNewCustomer()
+        {
+            Customer customer = new Customer(view.FullName, view.Address, view.Email, view.Citizenship);
+            repository.SaveNewCustomer( customer);
             UpdateCustomerListView();
         }
 

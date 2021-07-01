@@ -8,11 +8,12 @@ namespace MVP.Model
 {
     public class Customer
     {
-        public Customer(string fullName, string address, string email)
+        public Customer(string fullName, string address, string email,string citizenship)
         {
             FullName = fullName;
             Address = address;
             Email = email;
+            Citizenship = citizenship;
         }
         public Customer()
         {
@@ -21,7 +22,7 @@ namespace MVP.Model
         public string FullName { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
-
+        public string Citizenship { get; set; }
 
     }
 }

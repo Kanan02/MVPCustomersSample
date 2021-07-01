@@ -38,11 +38,13 @@ namespace MVP.View
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.citizenshipTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(345, 311);
+            this.SaveButton.Location = new System.Drawing.Point(345, 369);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(82, 40);
             this.SaveButton.TabIndex = 0;
@@ -68,7 +70,7 @@ namespace MVP.View
             // 
             // EditButton
             // 
-            this.EditButton.Location = new System.Drawing.Point(453, 311);
+            this.EditButton.Location = new System.Drawing.Point(453, 369);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(82, 40);
             this.EditButton.TabIndex = 3;
@@ -105,7 +107,7 @@ namespace MVP.View
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(342, 206);
+            this.label3.Location = new System.Drawing.Point(342, 200);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 8;
@@ -113,16 +115,34 @@ namespace MVP.View
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(345, 244);
+            this.emailTextBox.Location = new System.Drawing.Point(345, 238);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(153, 22);
             this.emailTextBox.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(342, 280);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 17);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Citizenship";
+            // 
+            // citizenshipTextBox
+            // 
+            this.citizenshipTextBox.Location = new System.Drawing.Point(345, 312);
+            this.citizenshipTextBox.Name = "citizenshipTextBox";
+            this.citizenshipTextBox.Size = new System.Drawing.Size(153, 22);
+            this.citizenshipTextBox.TabIndex = 9;
             // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 430);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.citizenshipTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.label2);
@@ -150,5 +170,7 @@ namespace MVP.View
         private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox citizenshipTextBox;
     }
 }

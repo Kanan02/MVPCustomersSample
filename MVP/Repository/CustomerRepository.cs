@@ -37,14 +37,11 @@ namespace MVP.Repository
         void XmlFakeRepo()
         {
             List<Customer> customerList = new List<Customer> { 
-                new Customer("John Doe","Some 111/a","doe@gmail.com"),
-                new Customer("Terminator Swartz","Berlin 0/a","term@gmail.com")
+                new Customer("John Doe","Some 111/a","doe@gmail.com","Azerbaijan"),
+                new Customer("Terminator Swartz","Berlin 0/a","term@gmail.com","Kongo")
             };
             SaveCustomers(customerList);
         }
-
-
-
 
         public IEnumerable<Customer> GetAllCustomers()
         {
@@ -67,7 +64,11 @@ namespace MVP.Repository
         {
             customers[id] = customer;
             SaveCustomers(customers);
-
+        }
+        public void SaveNewCustomer(Customer customer)
+        {
+            customers.Add(customer);
+            SaveCustomers(customers);
         }
     }
 }

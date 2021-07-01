@@ -12,5 +12,6 @@ namespace MVP.Repository
         IEnumerable<Customer> GetAllCustomers();
         Customer GetCustomerById(int id);
         void SaveCustomer(int id, Customer customer);
+        void SaveNewCustomer( Customer customer);
     }
 }

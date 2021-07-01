@@ -26,6 +26,11 @@ namespace MVP.View
             get;
             set;
         }
+        string Citizenship
+        {
+            get;
+            set;
+        }
         string Email
         {
             get;
